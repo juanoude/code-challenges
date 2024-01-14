@@ -1,3 +1,5 @@
+<img src="./img/no-selected-design.jpeg" height="200" > </img>
+
 # Angular Coding Challenge - Battle of Monsters
 
 This is a Angular code challenge that I had to do to be vetted on the Angular framework. It had to be finished under 60 minutes and recorded with my commenting while coding.
@@ -25,6 +27,6 @@ Watch challenge recording: [https://drive.google.com/file/d/1Bq5rZRe1mXVZ_P2lhGD
 4. Tests pass, and coverage has been added to cover the changes and new implementations.
 
 ## Design
-<img src="./img/no-selected-design.jpeg.jpeg" height="400" > </img>
-<img src="./img/monsters-selected-design.jpeg" height="400"> </img>
-<img src="./img/win-message-design.jpeg.jpeg" height="400"> </img>
+<img src="./img/no-selected-design.jpeg" height="200" > </img>
+<img src="./img/monsters-selected-design.jpeg" height="200"> </img>
+<img src="./img/win-message-design.jpeg" height="200"> </img>
