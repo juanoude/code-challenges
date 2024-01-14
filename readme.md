@@ -1,5 +1,5 @@
 # Code Challenges / Books exercises
-These are collection of Code Challenges and book exercises that I ended up doing
+This is the collection of Code Challenges and book exercises that I ended up doing
 
 ## Code-Challenges
 
