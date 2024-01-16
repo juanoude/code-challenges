@@ -18,7 +18,7 @@ This is a Golang code challenge that I had to do to be vetted on the Golang lang
 * Do NOT modify already implemented tests. If your code is implemented correctly, these tests should pass without modifications.
 * You will face some issues in making the app run; this is part of the challenge, and we expect you to fix them.
 
-> Battle Algorithm
+> **Battle Algorithm**
 > - The monster with the highest speed makes the first attack, if both speeds are equal, the monster with the higher attack goes first.
 > - For calculating the damage, subtract the defense from the attack (attack - defense); the difference is the damage; if the attack is equal to or lower than the defense, the damage is 1.
 > - Subtract the damage from the HP (HP = HP - damage).
