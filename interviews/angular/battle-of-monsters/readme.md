@@ -1,10 +1,10 @@
-<img src="../angular.svg" height="200" > </img>
+<img src="../angular.svg" height="100" > </img>
 
 # Angular Coding Challenge - Battle of Monsters
 
 This is a Angular code challenge that I had to do to be vetted on the Angular framework. It had to be finished under 60 minutes and recorded with my commenting while coding.
 
-**Here is the video recording:**
+> **Here is the video recording:**
 [https://drive.google.com/file/d/1Bq5rZRe1mXVZ_P2lhGDyz1nbAkegXahd/view?usp=sharing](https://drive.google.com/file/d/1Bq5rZRe1mXVZ_P2lhGDyz1nbAkegXahd/view?usp=sharing)
 
 ## The coding challenge
