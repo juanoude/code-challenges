@@ -11,5 +11,4 @@ db/*
 
 # IDE
 .vscode/*
-!.vscode/launch.json
 reports
