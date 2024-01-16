@@ -1,4 +1,4 @@
-<img src="../angular.svg" height="100" > </img>
+<img src="../angular.svg" height="200" > </img>
 
 # Angular Coding Challenge - Battle of Monsters
 

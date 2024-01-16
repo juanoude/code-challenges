@@ -1,10 +1,10 @@
-<img src="../golang.svg" height="200" > </img>
+<img src="../golang.svg" height="100" > </img>
 
 # Golang Coding Challenge - Battle of Monsters
 
 This is a Golang code challenge that I had to do to be vetted on the Golang language. It had to be finished around 60 minutes and recorded with my commenting while coding.
 
-**Here is the video recording:**
+> **Here is the video recording:**
 [https://drive.google.com/file/d/1Q473wnSviMpdl8E67beLc4d4xg16taol/view?usp=sharing](https://drive.google.com/file/d/1Q473wnSviMpdl8E67beLc4d4xg16taol/view?usp=sharing)
 
 ## The coding challenge
