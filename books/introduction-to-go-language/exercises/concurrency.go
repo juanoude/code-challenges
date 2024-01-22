@@ -74,14 +74,16 @@ func ThirdChannelExample() {
 	go func() {
 		for {
 			c1 <- "from 1"
-			time.Sleep(time.Second * 2)
+			SleepChannelImplementation(time.Second * 2)
+			// time.Sleep(time.Second * 2)
 		}
 	}()
 
 	go func() {
 		for {
 			c2 <- "from 2"
-			time.Sleep(time.Second * 3)
+			SleepChannelImplementation(time.Second * 3)
+			// time.Sleep(time.Second * 3)
 		}
 	}()
 
@@ -143,11 +145,26 @@ func FourthChannelExample() {
 
 	for range urls {
 		result := <-results
-		fmt.Println(result)
 		if result.Size > biggest.Size {
 			biggest = result
 		}
 	}
 
 	fmt.Println("The biggest home page: ", biggest.URL)
+}
+
+func SleepChannelImplementation(deadline time.Duration) {
+	for {
+		_ = <-time.After(deadline)
+		return
+	}
+}
+
+func BufferedChannelTest() {
+	ch := make(chan int, 2)
+	ch <- 1
+	ch <- 2
+	// ch <- 3 - Overflows the buffer and blocks the execution
+	fmt.Println(<-ch)
+	fmt.Println(<-ch)
 }

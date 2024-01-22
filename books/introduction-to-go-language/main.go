@@ -7,5 +7,6 @@ func main() {
 	// exercises.FirstChannelExample()
 	// exercises.SecondChannelExample()
 	// exercises.ThirdChannelExample()
-	exercises.FourthChannelExample()
+	// exercises.FourthChannelExample()
+	exercises.BufferedChannelTest()
 }
