@@ -2,7 +2,9 @@ package exercises
 
 import (
 	"fmt"
+	"io"
 	"math/rand"
+	"net/http"
 	"time"
 )
 
@@ -63,4 +65,89 @@ func ponger(c chan string) {
 	for i := 0; ; i++ {
 		c <- "pong"
 	}
+}
+
+func ThirdChannelExample() {
+	c1 := make(chan string)
+	c2 := make(chan string)
+
+	go func() {
+		for {
+			c1 <- "from 1"
+			time.Sleep(time.Second * 2)
+		}
+	}()
+
+	go func() {
+		for {
+			c2 <- "from 2"
+			time.Sleep(time.Second * 3)
+		}
+	}()
+
+	go func() {
+		for {
+			select {
+			case msg1 := <-c1:
+				fmt.Println(msg1)
+			case msg2 := <-c2:
+				fmt.Println(msg2)
+			case <-time.After(time.Second): // Trigger after each second
+				fmt.Println("timeout")
+				// default:
+				// 	fmt.Println("nothing ready")
+			}
+		}
+	}()
+
+	var input string
+	fmt.Scanln(&input)
+}
+
+func FourthChannelExample() {
+	type HomePageSize struct {
+		URL  string
+		Size int
+	}
+
+	urls := []string{
+		"http://www.apple.com",
+		"http://www.amazon.com",
+		"http://www.google.com",
+		"http://www.microsoft.com",
+	}
+
+	results := make(chan HomePageSize)
+	for _, url := range urls {
+		go func(url string) {
+			res, err := http.Get(url)
+			if err != nil {
+				panic(err)
+			}
+
+			defer res.Body.Close()
+
+			bs, err := io.ReadAll(res.Body)
+			if err != nil {
+				panic(err)
+			}
+
+			results <- HomePageSize{
+				URL:  url,
+				Size: len(bs),
+			}
+		}(url)
+	}
+
+	var biggest HomePageSize
+
+	for range urls {
+		result := <-results
+		fmt.Println(result)
+		if result.Size > biggest.Size {
+			biggest = result
+		}
+	}
+
+	fmt.Println("The biggest home page: ", biggest.URL)
 }
